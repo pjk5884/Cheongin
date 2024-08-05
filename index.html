@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Search</title>
+    <link rel="stylesheet" href="stylesmobile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top-image-container">
+        <!-- Desktop version -->
+        <img src="top-image.jpg" alt="Top Image" class="top-image">
+        <!-- Mobile version -->
+        <img src="top-image-mobile.png" alt="Top Image" class="top-image-mobile">
+
+    </div>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+        <div class="video-text-overlay">
+            <span class="video-text-primary">청인 유산균의</span><br>
+            <span class="video-text-secondary">4가지 원칙</span>
+        </div>
+    </div>
+    <div class="interface-container" id="interface-container">
+        <img src="logo.png" alt="Logo" class="logo"> <!-- Replace with actual logo image source -->
+        <div id="search-container">
+            <img id="search-icon" src="search-icon.png" alt="Search"> <!-- Replace with actual search icon image source -->
+            <input type="text" id="search-input" placeholder="키워드를 검색해보세요 (예: 초석잠, 프리바이오틱스)">
+        </div>
+        <div id="button-container">
+            <button class="button-yellow" onclick="scrollToQuestionnaire()">딱 맞는 제품 추천!</button>
+            <button class="button-blue" onclick="window.location.href='https://example1.com'">청인몰 바로가기</button>
+        </div>
+        <div id="search-results" class="search-results"></div>
+    </div>
+
+    <!-- Info Sections -->
+    <section class="info-section">
+        <div class="info-container">
+            <img src="info-image1.jpg" alt="Info Image" class="info-image"> <!-- Replace with actual image source -->
+            <div class="info-text">
+                <h1>장인 정신</h1>
+                <p>청인은 유산균을 <span class="highlight-red">곡물에 직접 발효</span>하고,</p>
+                <p><span class="highlight-red">우리 몸의 체온</span>, 36.5℃ 에서 건조합니다.</p>
+                <p>생산이 길어져도, 청인은 바꾸지 않습니다.</p>
+                <button class="info-button-red">더 알아보기</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="info-container4">
+            <div class="info-text">
+                <h2>발명 정신</h2>
+                <!-- Desktop version -->
+                <p class="desktop">이러한 생산방식은 <span class="highlight-yellow">오로지 청인만의 특허 발효 비법</span>입니다.</p>
+                <p class="desktop"><span class="highlight-yellow">유산균 박사</span>가 직접 연구, 배합한 <span class="highlight-yellow">한국 토종 유산균</span>들 입니다.</p>
+            
+                <!-- Mobile version -->
+                <p class="mobile">이러한 생산방식은</p>
+                <p class="mobile"><span class="highlight-yellow">오로지 청인만의 특허 발효 비법</span>입니다.</p>
+                <p class="mobile"><span class="highlight-yellow">유산균 박사</span>가 직접 연구, 배합한</p>
+                <p class="mobile"><span class="highlight-yellow">한국 토종 유산균</span>들 입니다.</p>
+                <button class="info-button-yellow">더 알아보기</button>
+            </div>
+            <img src="info-image2.jpg" alt="Info Image" class="info-image"> <!-- Replace with actual image source -->
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="info-container">
+            <img src="info-image3.jpg" alt="Info Image" class="info-image"> <!-- Replace with actual image source -->
+            <div class="info-text">
+                <h3>책임 정신</h3>
+                <p><span class="highlight-blue">연구 → 생산 → 유통 → 판매</span>까지,</p>
+                <p>청인은 소비자를 위해 전부 책임집니다.</p>
+                <p>청인의 유통에는 <span class="highlight-blue">어떤 거품도 없습니다.</span></p>
+                <button class="info-button-blue">더 알아보기</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="info-section">
+        <div class="info-container3">
+            <div class="info-text">
+                <h4>보은 정신</h4>
+                <p>청인은 소비자에게 은혜를 갚습니다.</p>
+                <p>국내 배송비</span>는 청인이 <span class="highlight-red">전부 부담합니다.</span></p>
+                <p><span class="highlight-red">할인된 가격에 청인을 만나보세요.</span></p>
+                <button class="info-button-sale">할인 상품 바로 가기</button>
+            </div>
+            <img src="info-image6.jpg" alt="Info Image" class="info-image"> <!-- Replace with actual image source -->
+        </div>
+        <div class="info-container2">
+            <div class="info-text">
+                <p><span class="highlight-black">국내 배송비는 청인이 전부 부담합니다.</span></p>
+            </div>
+            <img src="info-image7.jpg" alt="Info Image" class="info-image2"> <!-- Replace with actual image source -->
+        </div>
+    </section>
+
+
+    <section class="sale-section" id="sale-section">
+        <div class="rainbow-divider">
+            <!-- Desktop version -->
+            <img src="rainbow.png" alt="Rainbow Divider" class="rainbow-image-desktop">
+            <!-- Mobile version -->
+            <img src="rainbow_mobile.png" alt="Rainbow Divider" class="rainbow-image-mobile">
+        </div>
+    </section>
+
+    <div id="questionnaire-section">
+        <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+        <div id="questionnaire">
+            <div id="question-container">
+                <p id="question-text"></p>
+                <div id="answer-container" class="grid-container"></div>
+            </div>
+        </div>
+        <button id="go-back-button" onclick="goBack()" style="display: none;">뒤로 가기</button>
+        <div id="product-recommendation">
+            <h2>추천 제품</h2>
+            <div id="recommendation-boxes" class="grid-container2"></div>
+        </div>
+    </div>
+    <section class="info-section2">
+        <div class="info-container">
+            <img src="call-center.png" alt="Info Image" class="info-image"> <!-- Replace with actual image source -->
+            <div class="info-text2">
+                <h5>1600-8988</h5>
+                <p>더 자세한 내용이 알고싶으시다면,</p>
+                <p><span class="highlight-red">청인 장케어센터로 전화주세요.</span></p>
+                <p>운영시간: 평일 09:00 - 18:00</p>
+                <p>(12~13시는 점심시간 입니다.)</p><br>
+                <p>   </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="scriptmobile.js"></script>
+    </section>
+
+</body>
+
+<footer>
+    <button id="go-to-top" onclick="scrollToTop()">상단으로 돌아가기</button>
+
+    <div class="ft_copyright">
+        <h2>(주)힐링바이오</h2>
+        <div class="columns">
+            <div class="column">
+                <span><b>대표:</b> 박병희</span>
+                <span><b>사업자등록번호:</b> 114-81-76055</span>
+                <span><b>통신판매업신고번호:</b> 제2008-서울용산-0478호</span>
+                <span><b>개인정보책임관리자:</b> 박병희</span>
+            </div>
+            <div class="column">
+                <span><b>주소:</b> 서울시 용산구 장문로 14 우성빌딩 6층</span>
+                <span><b>전화:</b> 02-797-1114</span>
+                <span><b>팩스:</b> 02-795-5402</span>
+                <span><b>이메일:</b> info@healingbio.co.kr</span>
+            </div>
+        </div>
+        <p>COPYRIGHT © 2021 (주)힐링바이오 ALL RIGHTS RESERVED.</p>
+    </div>
+</footer>
+
+
+</html>
