@@ -4,7 +4,7 @@ body {
     padding: 0;
     overflow-x: hidden;
     min-height: 100vh;
-    background-color: rgb(26, 26, 26);
+    background-color: rgb(0, 0, 0);
 }
 
 .top-image-container {
@@ -243,7 +243,7 @@ body {
 }
 
 .info-section {
-    background-color: rgb(26, 26, 26);
+    background-color: rgb(0, 0, 0);
     color: white;
 }
 
@@ -368,7 +368,7 @@ body {
 }
 
 .highlight-black {
-    color: rgb(26, 26, 26); /* Black color */
+    color: rgb(0, 0, 0); /* Black color */
 }
 
 .info-button-red {
