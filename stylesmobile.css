@@ -1202,4 +1202,9 @@ footer {
     .box .product-description {
         font-size: 0.9em;
     }
+
+    .grid-container button:hover {
+        display: none;
+    }
+        
 }
